@@ -10,6 +10,9 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
     <script type="module" src="./js/script.js"></script>
     <link rel="stylesheet" href="./css/style.css">
@@ -20,18 +23,21 @@
         <h1>Email Generator</h1>
     </header>
     <main>
-        <section class="container my-3">
-            <h3 class="d-flex justify-content-center">Email's</h3>
-            <ol id="email">
-            </ol>
-            <section>
-                <button id="btnGenera" class="btn btn-success">Stampa</button>
-                <button class="btn btn-dark">Cancella</button>
-            </section>
+        <section class="d-flex justify-content-center my-2">
+            <button id="btnGenera" class="btn btn-success">Stampa</button>
+            <button class="btn btn-dark ml-2">Cancella</button>
         </section>
+        <section class="container my-3 justify-content-center">
+            <div class="row">
+                <h3 class="">Email's</h3>
+                <ol id="namesList"></ol>
+                <ol id="email" class=""></ol>
+
+            </div>
+        </section>
+
     </main>
     <footer>
-
     </footer>
     <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"

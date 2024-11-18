@@ -2,3 +2,6 @@ header {
   background-color: chocolate;
   color: rgb(97, 52, 52);
 }
+ol {
+  list-style-type: none;
+}
