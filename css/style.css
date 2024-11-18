@@ -5,3 +5,12 @@ header {
 ol {
   list-style-type: none;
 }
+.email-user {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.email-user li {
+  padding: 5px;
+}

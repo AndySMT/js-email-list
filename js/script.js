@@ -16,9 +16,17 @@ function getEmail(index) {
   axios
     .get("https://flynn.boolean.careers/exercises/api/random/mail")
     .then((risposta) => {
-      email.innerHTML += `<li><i class="fa-solid fa-envelope"></i>  ${risposta.data.response}</li>`;
+      /* email.innerHTML += `<li class="border"><i class="fa-solid fa-envelope"></i>  ${risposta.data.response}</li>`; */
       console.log(risposta.data.response);
-      namesList.innerHTML += `<li><i class="fa-solid fa-user"></i>  ${names[index]}</li>`;
+      const charIndex = risposta.data.response.indexOf("@");
+      let userName = risposta.data.response.substring(0, charIndex);
+      /*  namesList.innerHTML += `<li><i class="fa-solid fa-user"></i>  ${names[index]}</li>`; */
+      /* email.innerHTML += `<li class="border"><i class="fa-solid fa-user"></i>  ${userName}</li>`; */
+      email.innerHTML += `
+        <div class="email-user d-flex border">
+            <li><i class="fa-solid fa-user"></i> ${userName}</li>
+            <li><i class="fa-solid fa-envelope"></i> ${risposta.data.response}</li>
+        </div>`;
     })
     .catch((error) => {
       console.log(error);
