@@ -17,7 +17,18 @@ function getEmail() {
     .then((risposta) => {
       email.innerHTML += `<li>La tue email e':  ${risposta.data.response}</li>`;
       console.log(risposta.data.response);
+    })
+    .catch((error) => {
+      console.log(error);
+    })
+    .finally(() => {
+      console.log("Request completed");
     });
 }
 
+function reset() {
+  email.innerHTML = "";
+}
+
 btnGenera.addEventListener("click", getEmailX10);
+btnReset.addEventListener("click", reset);
